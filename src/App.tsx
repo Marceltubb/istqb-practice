@@ -8,6 +8,7 @@ import {
   Button,
   Select,
   HStack,
+  Tooltip,
 } from '@chakra-ui/react';
 import {
   Table,
@@ -17,6 +18,7 @@ import {
   Th,
   Td,
 } from '@chakra-ui/table';
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import { ExamType, ExamState, ExamResult } from './types';
 import { examQuestions } from './data/questions';
 
@@ -234,8 +236,12 @@ function App() {
                         whiteSpace="normal"
                         height="auto"
                         py={4}
+                        textAlign="left"
                       >
-                        {option.text}
+                        <HStack align="start" spacing={4} width="100%">
+                          <Text fontWeight="bold" minWidth="24px">{option.key}.</Text>
+                          <Text>{option.text}</Text>
+                        </HStack>
                       </Button>
                     ))}
                   </VStack>
@@ -266,24 +272,34 @@ function App() {
                     
                     return (
                       <>
-                        <Tr 
-                          key={result.questionId}
-                          bg={result.isCorrect ? "green.50" : "red.50"}
-                          onClick={() => toggleQuestionExpansion(result.questionId)}
-                          cursor="pointer"
-                          _hover={{ bg: result.isCorrect ? "green.100" : "red.100" }}
-                        >
-                          <Td>{result.questionId}</Td>
-                          <Td>
-                            {result.userAnswers.length > 0 
-                              ? result.userAnswers.join(", ") 
-                              : '(No answer)'}
-                          </Td>
-                          <Td>{result.correctAnswers.join(", ")}</Td>
-                          <Td color={result.isCorrect ? "green.500" : "red.500"}>
-                            {result.isCorrect ? "Correct" : "Incorrect"}
-                          </Td>
-                        </Tr>
+                        <Tooltip label="Click to view question details" hasArrow>
+                          <Tr 
+                            key={result.questionId}
+                            bg={result.isCorrect ? "green.50" : "red.50"}
+                            onClick={() => toggleQuestionExpansion(result.questionId)}
+                            cursor="pointer"
+                            _hover={{ bg: result.isCorrect ? "green.100" : "red.100" }}
+                          >
+                            <Td>
+                              <HStack spacing={2}>
+                                {isExpanded ? 
+                                  <ChevronUpIcon boxSize={5} /> : 
+                                  <ChevronDownIcon boxSize={5} />
+                                }
+                                <Text>{result.questionId}</Text>
+                              </HStack>
+                            </Td>
+                            <Td>
+                              {result.userAnswers.length > 0 
+                                ? result.userAnswers.join(", ") 
+                                : '(No answer)'}
+                            </Td>
+                            <Td>{result.correctAnswers.join(", ")}</Td>
+                            <Td color={result.isCorrect ? "green.500" : "red.500"}>
+                              {result.isCorrect ? "Correct" : "Incorrect"}
+                            </Td>
+                          </Tr>
+                        </Tooltip>
                         {isExpanded && question && (
                           <Tr bg={result.isCorrect ? "green.50" : "red.50"}>
                             <Td colSpan={4} p={4}>

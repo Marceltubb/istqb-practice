@@ -1,0 +1,38 @@
+{
+  "name": "istqb-practice",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build:single": "vite build --outDir dist-single --config vite.config.single.ts"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/table": "^2.1.0",
+    "@chakra-ui/theme": "^2.2.1",
+    "@chakra-ui/theme-utils": "^2.0.21",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^11.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^5.0.8",
+    "vite-plugin-singlefile": "^0.13.5"
+  }
+}

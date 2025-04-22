@@ -32,6 +32,7 @@ function App() {
   const [isPaused, setIsPaused] = useState(false);
   const [pausedTime, setPausedTime] = useState<number>(0);
   const [finalTime, setFinalTime] = useState<string>("00:00:00");
+  const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     let intervalId: number;
@@ -159,6 +160,18 @@ function App() {
   const score = results.filter(r => r.isCorrect).length;
   const totalQuestions = results.length;
 
+  const toggleQuestionExpansion = (questionId: number) => {
+    setExpandedQuestions(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(questionId)) {
+        newSet.delete(questionId);
+      } else {
+        newSet.add(questionId);
+      }
+      return newSet;
+    });
+  };
+
   if (!examState.examType) {
     return (
       <ChakraProvider>
@@ -247,23 +260,64 @@ function App() {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  {results.map((result) => (
-                    <Tr 
-                      key={result.questionId}
-                      bg={result.isCorrect ? "green.50" : "red.50"}
-                    >
-                      <Td>{result.questionId}</Td>
-                      <Td>
-                        {result.userAnswers.length > 0 
-                          ? result.userAnswers.join(", ") 
-                          : '(No answer)'}
-                      </Td>
-                      <Td>{result.correctAnswers.join(", ")}</Td>
-                      <Td color={result.isCorrect ? "green.500" : "red.500"}>
-                        {result.isCorrect ? "Correct" : "Incorrect"}
-                      </Td>
-                    </Tr>
-                  ))}
+                  {results.map((result) => {
+                    const question = examQuestions[examState.examType!].find(q => q.id === result.questionId);
+                    const isExpanded = expandedQuestions.has(result.questionId);
+                    
+                    return (
+                      <>
+                        <Tr 
+                          key={result.questionId}
+                          bg={result.isCorrect ? "green.50" : "red.50"}
+                          onClick={() => toggleQuestionExpansion(result.questionId)}
+                          cursor="pointer"
+                          _hover={{ bg: result.isCorrect ? "green.100" : "red.100" }}
+                        >
+                          <Td>{result.questionId}</Td>
+                          <Td>
+                            {result.userAnswers.length > 0 
+                              ? result.userAnswers.join(", ") 
+                              : '(No answer)'}
+                          </Td>
+                          <Td>{result.correctAnswers.join(", ")}</Td>
+                          <Td color={result.isCorrect ? "green.500" : "red.500"}>
+                            {result.isCorrect ? "Correct" : "Incorrect"}
+                          </Td>
+                        </Tr>
+                        {isExpanded && question && (
+                          <Tr bg={result.isCorrect ? "green.50" : "red.50"}>
+                            <Td colSpan={4} p={4}>
+                              <VStack align="stretch" spacing={4}>
+                                <Text fontWeight="bold">{question.text}</Text>
+                                <VStack align="stretch" spacing={2}>
+                                  {question.options.map(option => (
+                                    <Text 
+                                      key={option.key}
+                                      color={
+                                        result.correctAnswers.includes(option.key) 
+                                          ? "green.500" 
+                                          : result.userAnswers.includes(option.key) 
+                                            ? "red.500" 
+                                            : "gray.500"
+                                      }
+                                      fontWeight={
+                                        result.correctAnswers.includes(option.key) || 
+                                        result.userAnswers.includes(option.key)
+                                          ? "bold"
+                                          : "normal"
+                                      }
+                                    >
+                                      {option.key}. {option.text}
+                                    </Text>
+                                  ))}
+                                </VStack>
+                              </VStack>
+                            </Td>
+                          </Tr>
+                        )}
+                      </>
+                    );
+                  })}
                 </Tbody>
               </Table>
               <Button colorScheme="blue" onClick={() => startExam(null)}>

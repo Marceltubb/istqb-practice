@@ -108,7 +108,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 5,
-    "text": "Given the following testware:\n1. Coverage items\n2. Change requests\n3. Test execution schedule\n4. Prioritized test conditions\nAnd the following test activities\nA. Test analysis\nB. Test design\nC. Test implementation\nD. Test completion\nWhich of the following BEST shows the testware produced by the activities?",
+    "text": "Which of the following BEST shows the testware produced by the activities?",
     "options": [
       {
         "key": "A",
@@ -129,7 +129,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-c-5.png"
   },
   {
     "id": 6,
@@ -408,7 +409,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 17,
-    "text": "Given the following review types:\n1. Technical review\n2. Informal review\n3. Inspection\n4. Walkthrough\nAnd the following descriptions:\nA. Includes objectives such as gaining consensus, generating new ideas, and motivating authors to improve\nB. Includes objectives such as educating reviewers, gaining consensus, generating new ideas and detecting potential defects\nC. The main objective is detecting potential defects and it requires metrics collection to support process improvement\nD. The main objective is detecting potential defects and it generates no formal documented output\nWhich of the following BEST matches the review types and the descriptions?",
+    "text": "Which of the following BEST matches the review types and the descriptions?",
     "options": [
       {
         "key": "A",
@@ -429,7 +430,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-c-17.png"
   },
   {
     "id": 18,
@@ -508,7 +510,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 21,
-    "text": "A developer was asked to implement the following business rule:\nINPUT: value (integer number)\n$F(value\\le100~OR~value\\ge200)$ THEN write \"value incorrect\"\nELSE write \"value OK\"\nYou design the test cases using 2-value boundary value analysis.\nWhich of the following sets of test inputs achieves the greatest coverage?",
+    "text": "Which of the following sets of test inputs achieves the greatest coverage?",
     "options": [
       {
         "key": "A",
@@ -529,11 +531,12 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-c-21.png"
   },
   {
     "id": 22,
-    "text": "You are working on a project to develop a system to analyze driving test results.\nYou have been asked to design test cases based on the following decision table.\nR1 R2 R3\nC1: First attempt at the exam? F\nC2: Theoretical exam passed? T F\nC3: Practical exam passed?\nT F\nIssue a driving license? X\nRequest additional driving lessons? X\nRequest to take the exam again?\nX\nWhat test data will show that there are contradictory rules in the decision table?",
+    "text": "What test data will show that there are contradictory rules in the decision table?",
     "options": [
       {
         "key": "A",
@@ -554,11 +557,12 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-c-22.png"
   },
   {
     "id": 23,
-    "text": "You are designing test cases based on the following state transition diagram:\nRoom request\nNot available\nSTART\nREQUESTING\nWAITING LIST\nAvailable\nAvailable\nCONFIRMED\nCancel\nPay\nEND\nWhat is the MINIMUM number of test cases required to achieve 100% valid transitions coverage?",
+    "text": "What is the MINIMUM number of test cases required to achieve 100% valid transitions coverage?",
     "options": [
       {
         "key": "A",
@@ -579,11 +583,12 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-c-23.png"
   },
   {
     "id": 24,
-    "text": "You want to apply branch testing to the code represented by the following control flow graph.\nHow many coverage items do you need to test?",
+    "text": "How many coverage items do you need to test?",
     "options": [
       {
         "key": "A",
@@ -604,7 +609,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-c-24.png"
   },
   {
     "id": 25,
@@ -708,7 +714,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 29,
-    "text": "You are using acceptance test-driven development and designing test cases based on the following user story:\nAs a Regular or Special user, I want to be able to\nuse my electronic floor card, to access specific floors.\nAcceptance Criteria:\nAC1: Regular users have access to floors 1 to 3\nAC2: Floor 4 is only accessible to Special users\nAC3: Special users have all the access rights of Regular users\nWhich test case is the MOST reasonable one to test AC3?",
+    "text": "Which test case is the MOST reasonable one to test AC3?",
     "options": [
       {
         "key": "A",
@@ -729,7 +735,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-c-29.png"
   },
   {
     "id": 30,
@@ -758,7 +765,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 31,
-    "text": "At the beginning of each iteration, the team estimates the amount of work (in person-days) they will need to complete during the iteration.\nLet $E(n)$ be the estimated amount of work for iteration n, and let $A(n)$ be the actual amount of work done in iteration n.\nFrom the third iteration, the team uses the following estimation model based on extrapolation:\nE(n)\n3*A(n-1) + A(n-2)\n4\nThe graph shows the estimated and actual amount of work for the first four iterations.\nEstimated and actual effort (in person-days)\nWhat is the estimated amount of work for iteration #5?",
+    "text": "What is the estimated amount of work for iteration #5?",
     "options": [
       {
         "key": "A",
@@ -779,11 +786,12 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-c-31.png"
   },
   {
     "id": 32,
-    "text": "You are preparing a test execution schedule for executing seven test cases TC 1 to TC 7.\nThe following figure includes the priorities of these test cases ( $1=$ highest priority, $3=$ lowest priority).\nThe figure also shows the dependencies between test cases using arrows.\nFor instance, the arrow from TC 4 to TC 5 means that TC 5 can only be executed if TC 4 was previously executed.\nWhich test case should be executed sixth?",
+    "text": "Which test case should be executed sixth?",
     "options": [
       {
         "key": "A",
@@ -804,7 +812,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-c-32.png"
   },
   {
     "id": 33,
@@ -933,7 +942,7 @@ export const examQuestionsC: Question[] = [
   },
   {
     "id": 38,
-    "text": "Consider the following defect report for a web-based shopping application:\nApplication: WebShop v0.99\nDefect: Login button not working\nSteps to Reproduce:\nLaunch the website\nClick on the login button\nExpected result: The user should be redirected to the login page.\nActual result: The login button does not respond when clicked.\nSeverity: High\nPriority: Urgent\nWhat is the MOST important information that is missing from this report?",
+    "text": "What is the MOST important information that is missing from this report?",
     "options": [
       {
         "key": "A",
@@ -954,7 +963,8 @@ export const examQuestionsC: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-c-38.png"
   },
   {
     "id": 39,

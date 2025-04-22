@@ -403,7 +403,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 17,
-    "text": "Given the following task descriptions:\n1. The quality characteristics to be evaluated and the exit criteria are selected\n2. Everyone has access to the work product\n3. Anomalies are identified in the work product\n4. Anomalies are discussed\nAnd the following review activities\nA. Individual review\nB. Review initiation\nC. Planning\nD. Communication and analysis\nWhich of the following BEST matches the task descriptions and activities?",
+    "text": "Which of the following BEST matches the task descriptions and activities?",
     "options": [
       {
         "key": "A",
@@ -424,11 +424,12 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-b-17.png"
   },
   {
     "id": 18,
-    "text": "Given the following roles in reviews:\n1. Scribe\n2. Review leader\n3. Facilitator\n4. Manager\nAnd the following responsibilities in reviews:\nA. Ensures the effective running of review meetings and the setting up a safe review environment\nB. Records review information, such as decisions and new anomalies found during the review meeting\nC. Decides what is to be reviewed and provides resources, such as staff and time for the review\nD. Takes overall responsibility for the review such as organizing when and where the review will take place\nWhich of the following BEST matches\nthe roles and responsibilities?",
+    "text": "Which of the following BEST matches\nthe roles and responsibilities?",
     "options": [
       {
         "key": "A",
@@ -449,7 +450,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-b-18.png"
   },
   {
     "id": 19,
@@ -528,7 +530,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 22,
-    "text": "The following decision table contains the rules for determining the risk of atherosclerosis.\nConditions Rule 1 Rule 2 Rule 3 Rule 4 Rule 5\nCholesterol $(mg/dl)$ $\\le124$ $\\le124$ 125-\n200 125-\n200 $\\ge201$\nBlood pressure (mm\nHg) $\\le140$ > 140 $\\le140$ > 140\nAction\nRisk level very low low medium high very high\nYou designed the test cases with the following test input data:\nTC1: Cholesterol $=125~mg/dl$ Blood pressure $=141~mm~Hg$\nTC2: Cholesterol $=200~mg/dl$ Blood pressure $=201~mm~Hg$\nTC3: Cholesterol $=124~mg/dl$ Blood pressure $=201~mm~Hg$\nTC4: Cholesterol $=109~mg/dl$ Blood pressure $=200~mm~Hg$\nTC5: Cholesterol $=201~mg/dl$ Blood pressure $=140~mm~Hg$\nWhat is the decision table coverage achieved by these test cases?",
+    "text": "The following decision table contains the rules for determining the risk of atherosclerosis. What is the decision table coverage achieved by these test cases?",
     "options": [
       {
         "key": "A",
@@ -549,11 +551,12 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-b-22.png"
   },
   {
     "id": 23,
-    "text": "A storage system can store up to three elements and is modeled by the following state transition diagram.\nThe variable N represents the number of currently stored elements.\n$Add[N<2]/N:=N+1$\nAdd $[N=2]/N:=N+1$\n$Add/N:=1$\nNOT\nSTART\nFULL\n$Remove/N:=N-1$\nRemove [ $[N>0]/N:=N-1$\nFULL\nWhich of the following test cases, represented as sequences of events, achieves the highest level of valid transitions coverage?",
+    "text": "Which of the following test cases, represented as sequences of events, achieves the highest level of valid transitions coverage?",
     "options": [
       {
         "key": "A",
@@ -574,7 +577,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-b-23.png"
   },
   {
     "id": 24,
@@ -683,7 +687,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 28,
-    "text": "Consider the following acceptance criteria for a user story written from the perspective of an online store owner.\nGiven that the user is logged in and on the homepage, When the user clicks on the \"Add Item\" button, Then the \"Create Item\" form should appear, And the user should be able to input a name and price for the new item.\nIn what format is this acceptance criteria written?",
+    "text": "Consider the following acceptance criteria for a user story written from the perspective of an online store owner. In what format is this acceptance criteria written?",
     "options": [
       {
         "key": "A",
@@ -704,7 +708,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-b-28.png"
   },
   {
     "id": 29,
@@ -758,7 +763,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 31,
-    "text": "You want to estimate the test effort for the new project using estimation based on ratios.\nYou calculate the test-to-development effort ratio using averaged data for both development effort and test effort from four historical projects similar to the new one.\nThe table shows this historical data.\nProject Development effort\n($) Test effort\n($)\nP1 800,000 40,000\nP2 1,200,000 130,000\nP3 600,000 70,000\nP4 1,000,000 120,000\nThe estimated development effort for the new project is \\$800,000.\nWhat is your estimate of the test effort in this project?",
+    "text": "You want to estimate the test effort for the new project using estimation based on ratios.\nYou calculate the test-to-development effort ratio using averaged data for both development effort and test effort from four historical projects similar to the new one.\nThe table shows this historical data. What is your estimate of the test effort in this project?",
     "options": [
       {
         "key": "A",
@@ -779,11 +784,12 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-b-31.png"
   },
   {
     "id": 32,
-    "text": "You are testing a web application that allows users to SEARCH for products, VIEW product details, ADD products to a shopping cart, and place an ORDER.\nYou have prepared the following seven test cases, all of which you want to execute.\nThe tests should be executed in the best order, based on test priority.\nTest Priority $(1=$ higher priority)\nTC1 SEARCH for product A 4\nTC2 SEARCH for product B 4\nTC3 VIEW product A details 3\nTC4 VIEW product B details 2\nTC5 ADD product A to a shopping cart 3\nTC6 ADD product B to a shopping cart 1\nTC7 place an ORDER 5\nYou also identified the following logical dependencies between test cases:\nSEARCH functionality must be tested before VIEW functionality can be tested.\nVIEW functionality must be tested before ADD functionality. ADD functionality must be tested before ORDER functionality.\nWhich test case should be executed as the fourth one?",
+    "text": "Which test case should be executed as the fourth one?",
     "options": [
       {
         "key": "A",
@@ -804,7 +810,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-b-32.png"
   },
   {
     "id": 33,
@@ -833,7 +840,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 34,
-    "text": "Given the following risks:\n1. Ineffective loop implementation causes long system responses\n2. Consumers change their preferences\n3. Flooding of the server room\n4. Patients above a certain age receive inaccurate reports\nAnd the following mitigation activities:\nA. Risk acceptance\nB. Performance testing\nC. Using boundary value analysis as the test technique\nD. Risk transfer\nWhich of the following BEST matches the risks with the mitigation activities?",
+    "text": "Which of the following BEST matches the risks with the mitigation activities?",
     "options": [
       {
         "key": "A",
@@ -854,7 +861,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-b-34.png"
   },
   {
     "id": 35,
@@ -933,7 +941,7 @@ export const examQuestionsB: Question[] = [
   },
   {
     "id": 38,
-    "text": "You are\ntesting a sort function that gets a set of numbers as input and returns the same set of numbers sorted in ascending order.\nThe log from the test execution looks as follows.\nEnvironment configuration: sort function build 2.002.2182, test case set: TCS-3, # of TCs: 5\nTest run ID: 736\nStart 12:43:21.003\n12:43:21.003 Execution of TC1.\nInput: 3. Output: 3. Result: passed\n12:43:21.003 Execution of TC2. Input: 3 116 5. Output: 3 5 6 11. Result: passed\n12:43:21.004 Execution of TC3.\nInput: 87371. Output: 1378. Result: failed\n12:43:21.005 Execution of TC4. Input: -2-2-2-3-3. Output: -3 -2. Result: failed\n12:43:21.005 Execution of TC5.\nInput: 0-20344. Output: -2 0 3 4. Result: failed\nEnd 12:43:21.005\nTotal time of test cycle: 0:00:00.002\nWhich of the following provides the BEST description of the failure that can be used in a defect report?",
+    "text": "You are\ntesting a sort function that gets a set of numbers as input and returns the same set of numbers sorted in ascending order.\nThe log from the test execution looks as follows. Which of the following provides the BEST description of the failure that can be used in a defect report?",
     "options": [
       {
         "key": "A",
@@ -954,11 +962,12 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-b-38.png"
   },
   {
     "id": 39,
-    "text": "Given the following descriptions:\n1. Support workflow tracking\n2. Facilitate communication\n3. Virtual machines\n4. Support reviews\nAnd the following test tool categories:\nA. Static testing tools\nB. Tools supporting scalability and deployment standardization\nC. DevOps tools\nD. Collaboration tools\nWhich of the following BEST matches the descriptions and categories?",
+    "text": "Which of the following BEST matches the descriptions and categories?",
     "options": [
       {
         "key": "A",
@@ -979,7 +988,8 @@ export const examQuestionsB: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-b-39.png"
   },
   {
     "id": 40,

@@ -224,6 +224,15 @@ function App() {
                   <Text fontWeight="bold" mb={4}>
                     {question.id}. {question.text}
                   </Text>
+                  {question.image && (
+                    <Box mb={4} maxW="100%" overflow="hidden">
+                      <img 
+                        src={question.image} 
+                        alt={`Question ${question.id} diagram`}
+                        style={{ maxWidth: '100%', height: 'auto' }}
+                      />
+                    </Box>
+                  )}
                   <VStack align="stretch" spacing={3}>
                     {question.options.map((option) => (
                       <Button

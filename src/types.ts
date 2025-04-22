@@ -8,6 +8,7 @@ export interface Question {
     text: string;
   }[];
   correctAnswers: string[];  // Array of option keys
+  image?: string; // Base64 encoded image or path to image
 }
 
 export interface ExamState {

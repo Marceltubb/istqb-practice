@@ -308,7 +308,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 13,
-    "text": "Which types of failures (1-4) fit which test levels (A-D) BEST?\n1. Failures in system behavior as it deviates from the user's business needs\n2. Failures in communication between components\n3. Failures in logic in a module\n4. Failures in not correctly implemented business rules",
+    "text": "Which types of failures (1-4) fit which test levels (A-D) BEST?",
     "options": [
       {
         "key": "A",
@@ -329,11 +329,12 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-a-13.png"
   },
   {
     "id": 14,
-    "text": "You are testing a user story with three acceptance criteria: AC1, AC2 and AC3. AC1 is covered by test case TC1, AC2 by TC2, and AC3 by TC3. The test execution history had three test runs on three consecutive versions of the software as follows:\nTC1 (1) Failed (4) Passed (7) Passed\nTC2 (2) Passed (5) Failed (8) Passed\nTC3 (3) Failed (6) Failed (9) Passed\nTests are repeated once you are informed that all defects found in the test run are corrected and a new version of the software is available. Which of the above tests are executed as regression tests?",
+    "text": "You are testing a user story with three acceptance criteria: AC1, AC2 and AC3. AC1 is covered by test case TC1, AC2 by TC2, and AC3 by TC3. The test execution history had three test runs on three consecutive versions of the software as follows. Tests are repeated once you are informed that all defects found in the test run are corrected and a new version of the software is available. Which of the above tests are executed as regression tests?",
     "options": [
       {
         "key": "A",
@@ -354,7 +355,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-a-14.png"
   },
   {
     "id": 15,
@@ -508,7 +510,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 21,
-    "text": "You are testing a system that calculates the final course grade for a given student. The final grade is assigned based on the final result, according to the following rules:\n• 0-50 points: failed\n• 51-60 points: fair\n• 61-70 points: satisfactory\n• 71-80 points: good\n• 81-90 points: very good\n• 91-100 points: excellent\nYou have prepared the following set of test cases:\nTC1 91 excellent\nTC2 50 failed\nTC3 81 very good\nTC4 60 fair\nTC5 70 satisfactory\nTC6 80 good\nWhat is the 2-value Boundary Value Analysis (BVA) coverage for the final result that is achieved with the existing test cases?",
+    "text": "You are testing a system that calculates the final course grade for a given student. What is the 2-value Boundary Value Analysis (BVA) coverage for the final result that is achieved with the existing test cases?",
     "options": [
       {
         "key": "A",
@@ -529,11 +531,12 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-a-21.png"
   },
   {
     "id": 22,
-    "text": "Your favorite bicycle daily rental store has just introduced a new Customer Relationship Management system and asked you, one of their most loyal members, to test it. The implemented features are as follows:\n• Anyone can rent a bicycle, but members receive a 20% discount\n• However, if the return deadline is missed, the discount is no longer available\n• After 15 rentals, members get a gift: a T-Shirt\nDecision table describing the implemented features looks as follows:\nConditions R1 R2 R3 R4 R5 R6 R7 R8\nBeing a member T T T T F F F F\nMissed deadline T F T F T F F T\n15th rental F F T T F F T T\nActions\n20% discount X X X\nGift T-Shirt X X X\nBased ONLY on the feature description of the Customer Relationship Management system, which of the above rules describes an impossible situation?",
+    "text": "Your favorite bicycle daily rental store has just introduced a new Customer Relationship Management system and asked you, one of their most loyal members, to test it. Based ONLY on the feature description of the Customer Relationship Management system, which of the above rules describes an impossible situation?",
     "options": [
       {
         "key": "A",
@@ -554,7 +557,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-a-22.png"
   },
   {
     "id": 23,
@@ -579,7 +583,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "D"
-    ]
+    ],
+    "image": "/images/questions-a-23.png"
   },
   {
     "id": 24,
@@ -708,7 +713,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 29,
-    "text": "Consider the following user story:\nAs an Editor\nI want to review content before it is published\nso that I can assure the grammar is correct\nand its acceptance criteria:\n• The user can log in to the content management system with \"Editor\" role\n• The editor can view existing content pages\n• The editor can edit the page content\n• The editor can add markup comments\n• The editor can save changes\n• The editor can reassign to the \"content owner\" role to make updates\nWhich of the following is the BEST example of an ATDD test for this user story?",
+    "text": "Consider the following user story:",
     "options": [
       {
         "key": "A",
@@ -729,7 +734,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-a-29.png"
   },
   {
     "id": 30,
@@ -813,7 +819,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 33,
-    "text": "You are testing a mobile application that allows users to find a nearby restaurant based on the type of food they want to eat. Consider the following list of test cases, priorities (i.e., a smaller number means a higher priority), and dependencies:\nTest case number Test condition covered Priority Logical dependency\nTC 001 Select type of food 3 none\nTC 002 Select restaurant 2 TC 001\nTC 003 Get direction 1 TC 002\nTC 004 Call restaurant 2 TC 002\nTC 005 Make reservation 3 TC 002\nWhich of the following test cases should be executed as the third one?",
+    "text": "You are testing a mobile application that allows users to find a nearby restaurant based on the type of food they want to eat. Consider the following list of test cases, priorities (i.e., a smaller number means a higher priority), and dependencies: Which of the following test cases should be executed as the third one?",
     "options": [
       {
         "key": "A",
@@ -834,7 +840,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-a-33.png"
   },
   {
     "id": 34,
@@ -938,7 +945,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 38,
-    "text": "You received the following defect report from the developers stating that the anomaly described in this test report is not reproducible. Application hangs up\n2022-May-03-John Doe - Rejected\nThe application hangs up after entering \"Test input: \\$ä\" in the Name field on the new user creation screen. Tried to log off, log in with test_admin01 account, same issue. Tried with other test admin accounts, same issue. No error message received; log (see attached) contains fatal error notification. Based on the test case TC-1305, the application should accept the provided input and create the user. Please fix with high priority, this feature is related to REQ-0012, which is a critical new business requirement. What critical information is MISSING from this test report that would have been useful for the developers?",
+    "text": "You received the following defect report from the developers stating that the anomaly described in this test report is not reproducible. What critical information is MISSING from this test report that would have been useful for the developers?",
     "options": [
       {
         "key": "A",
@@ -959,7 +966,8 @@ export const examQuestionsA: Question[] = [
     ],
     "correctAnswers": [
       "C"
-    ]
+    ],
+    "image": "/images/questions-a-38.png"
   },
   {
     "id": 39,

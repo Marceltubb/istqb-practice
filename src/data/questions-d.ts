@@ -78,7 +78,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 4,
-    "text": "Given the following test tasks:\n1. Derive test cases from test conditions\n2. Identify reusable testware\n3. Organize test cases into test procedures\n4. Evaluate test basis and test object\nAnd the following test activities:\nA. Test analysis\nB. Test design\nC. Test implementation\nD. Test completion\nWhich of the following BEST matches the tasks with the activities?",
+    "text": "Which of the following BEST matches the tasks with the activities?",
     "options": [
       {
         "key": "A",
@@ -99,7 +99,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-d-4.png"
   },
   {
     "id": 5,
@@ -403,7 +404,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 17,
-    "text": "Given the following descriptions of review activities:\n1. Detected anomalies are deliberated upon, and determinations are reached regarding their status, ownership,\nand any further steps needed\n2. Issues are recorded, and any needed updates are addressed prior to the acceptance of the work product\n3. Reviewers employ techniques to come up with suggestions and questions about the work product and to spot anomalies\n4. The objective of the review and its schedule are established to ensure a focused and efficient review\n5. Participants are provided with access to the item being reviewed\nWhich of the following is the CORRECT sequence in the review process of the activities that correspond to the descriptions?",
+    "text": "Which of the following BEST matches the review types and the descriptions?",
     "options": [
       {
         "key": "A",
@@ -424,7 +425,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-d-17.png"
   },
   {
     "id": 18,
@@ -453,7 +455,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 19,
-    "text": "You perform system testing of an e-commerce web application and are provided with the following requirement:\nREQ 05-017.\nIf the total cost of purchases exceeds $100, the customer gets a 5% discount on subsequent purchases.\nOtherwise, the customer does not receive a discount.\nWhich test techniques will be MOST helpful in designing test cases based on this requirement?",
+    "text": "Which test techniques will be MOST helpful in designing test cases based on this requirement?",
     "options": [
       {
         "key": "A",
@@ -474,11 +476,12 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-d-19.png"
   },
   {
     "id": 20,
-    "text": "The system for selling cinema tickets calculates the discount type based on the client's birth year (BY) and on the current year (CY) as follows:\nLet D be the difference between CY and BY, that is, $D=CY-BY$\nIf $D<0$ then print the error message \"birth year cannot be greater than current year\"\nIf $0\\le D<18$ then apply the student discount\nIf $18\\le D<65$ then apply no discount\nIf $D\\ge65$ then apply the pensioner discount\nYour test suite already contains two test cases:\n$BY=1990,$ $CY=2020$, expected result: no discount\n$BY=2030.$ $CY=2029$, expected result: print the error message\nWhich\nof the following test data sets should be added to achieve full valid equivalence partitioning coverage for the discount type?",
+    "text": "Which of the following test data sets should be added to achieve full valid equivalence partitioning coverage for the discount type?",
     "options": [
       {
         "key": "A",
@@ -504,7 +507,8 @@ export const examQuestionsD: Question[] = [
     "correctAnswers": [
       "B",
       "E"
-    ]
+    ],
+    "image": "/images/questions-d-20.png"
   },
   {
     "id": 21,
@@ -533,7 +537,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 22,
-    "text": "You are designing test cases based on the following decision table.\nR1 R2 R3 R4 R5 R6 R7\nC1: Age 0-18 19-65 19-65 >65 0-18 19-65 >65\nC2: Experience 0-4 >4\nC3: Registered?\nNO NO NO NO YES YES YES\nCategory A A B B B D C\nSo far you have designed the following test cases:\nTC1: 19-year-old, unregistered man with no experience;\nexpected result: category A\nTC2: 65-year-old, unregistered woman with 5 years of experience;\nexpected result: category B\nTC3: 66-year-old, registered man with no experience;\nexpected result: category C\nTC4: 65-year-old, registered woman with 4 years of experience;\nexpected result: category D\nWhich of the following test cases, when added to the existing set of test cases, will increase the decision table coverage?",
+    "text": "Which of the following test cases, when added to the existing set of test cases, will increase the decision table coverage?",
     "options": [
       {
         "key": "A",
@@ -554,11 +558,12 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-d-22.png"
   },
   {
     "id": 23,
-    "text": "You are applying state transition testing to the hotel room reservation system modeled by the following state transition table, with 4 states and 5 different events:\nEvents\nState Available NotAvailable ChangeRoom Cancel Pay\nS1: Requesting S2 S3\nS2: Confirmed S1 S4 S4\nS3: Waiting list S2 S4\nS4: End\nAssuming all test cases start in the 'Requesting' state, which of the following test cases, represented as sequences of events, achieves the highest valid transitions coverage?",
+    "text": "Assuming all test cases start in the 'Requesting' state, which of the following test cases, represented as sequences of events, achieves the highest valid transitions coverage?",
     "options": [
       {
         "key": "A",
@@ -579,7 +584,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-d-23.png"
   },
   {
     "id": 24,
@@ -708,7 +714,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 29,
-    "text": "You have just started designing test cases for the following user story.\nAs a customer,\nI want to be able to filter search results by price range, so that I can find products within my budget more easily.\nAcceptance criteria:\n1. The filter should work for all versions of the application from version 3.0 upwards\n2. The filter should allow the customer to set a price range with a minimum and a maximum price\n3. The search results should update dynamically as the customer adjusts the price range filter\nIn all test cases the precondition is as follows: there are only two products available, products A and B. Product A costs $100 and product B costs $110.\nWhich of the following is the BEST example of a test case for this user story?",
+    "text": "Which of the following is the BEST example of a test case for this user story?",
     "options": [
       {
         "key": "A",
@@ -729,7 +735,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-d-29.png"
   },
   {
     "id": 30,
@@ -763,7 +770,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 31,
-    "text": "The team wants to estimate the time needed for one tester to execute four test cases for a software component.\nThe team has gathered the following measures of the effort used to execute a single test case:\nBest-case scenario: 1 hour\nWorst-case scenario: 8 hours\nMost likely scenario: 3 hours\nGiven that the three-point estimation technique is being used, what is the final estimate of the time needed to execute all four test cases?",
+    "text": "Given that the three-point estimation technique is being used, what is the final estimate of the time needed to execute all four test cases?",
     "options": [
       {
         "key": "A",
@@ -784,11 +791,12 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-d-31.png"
   },
   {
     "id": 32,
-    "text": "The table shows the traceability matrix from test cases to requirements.\n\"X\" means that a given test case covers the corresponding requirement.\nReq1 Req2 Req3 Req4 Req5 Req6 Req7\nTC1 X X X X\nTC2 X X X\nTC3 X X\nTC4 X\nYou want to prioritize the test cases following the additional coverage prioritization technique.\nYou execute all four test cases. Which test case should be executed as the LAST one?",
+    "text": "Which test case should be executed as the LAST one?",
     "options": [
       {
         "key": "A",
@@ -809,7 +817,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "B"
-    ]
+    ],
+    "image": "/images/questions-d-32.png"
   },
   {
     "id": 33,
@@ -943,7 +952,7 @@ export const examQuestionsD: Question[] = [
   },
   {
     "id": 38,
-    "text": "Consider the following defect report for a Book Lending System.\nDefect ID: 001\nSeverity: High\nTitle: Unable to Return a Book\nPriority:\nEnvironment: Windows 10, Google Chrome\nDescription: When attempting to return a book using the Book Return feature, the system does not register the return and the book remains checked out to the user.\nSteps to Reproduce:\nLogin to the Book Lending System as a user who has checked out a book.\nClick on the \"Book Return\" button for the book that has been checked out.\nSystem does not register the return and the book remains checked out.\nExpected Result: The book should be returned and no longer appear as checked out to the user.\nActual Result: The book remains checked out to the user and is not registered as returned in the system.\nAttachments: [empty list]\nWhich of the following is MOST likely to help the developer reproduce the failure quickly?",
+    "text": "Which of the following is MOST likely to help the developer reproduce the failure quickly?",
     "options": [
       {
         "key": "A",
@@ -960,7 +969,8 @@ export const examQuestionsD: Question[] = [
     ],
     "correctAnswers": [
       "A"
-    ]
+    ],
+    "image": "/images/questions-d-38.png"
   },
   {
     "id": 39,

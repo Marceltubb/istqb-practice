@@ -202,23 +202,33 @@ function App() {
     <ChakraProvider>
       <Box p={8}>
         <VStack spacing={6} align="stretch">
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Heading size="lg">ISTQB Practice Exam {examState.examType}</Heading>
-            <HStack spacing={4}>
-              <Text fontSize="xl">Time: {showResults ? finalTime : elapsedTime}</Text>
-              {examState.startTime && !showResults && (
-                <Button
-                  colorScheme={isPaused ? "green" : "yellow"}
-                  onClick={togglePause}
-                >
-                  {isPaused ? "Play" : "Pause"}
-                </Button>
-              )}
-            </HStack>
-          </Box>
-
           {!showResults ? (
             <>
+              <Box 
+                position="sticky" 
+                top={0} 
+                zIndex={1} 
+                bg="white" 
+                p={4} 
+                shadow="sm"
+                display="flex" 
+                justifyContent="space-between" 
+                alignItems="center"
+              >
+                <Heading size="lg">ISTQB Practice Exam {examState.examType}</Heading>
+                <HStack spacing={4}>
+                  <Text fontSize="xl">Time: {showResults ? finalTime : elapsedTime}</Text>
+                  {examState.startTime && !showResults && (
+                    <Button
+                      colorScheme={isPaused ? "green" : "yellow"}
+                      onClick={togglePause}
+                    >
+                      {isPaused ? "Play" : "Pause"}
+                    </Button>
+                  )}
+                </HStack>
+              </Box>
+
               {examQuestions[examState.examType].map((question) => (
                 <Box key={question.id} p={6} borderWidth={1} borderRadius="lg" bg="white" shadow="md">
                   <Text fontWeight="bold" mb={4}>
@@ -262,9 +272,17 @@ function App() {
             </>
           ) : (
             <VStack spacing={6} align="stretch">
-              <Heading size="md">
-                Your Score: {score}/{totalQuestions} ({Math.round((score/totalQuestions) * 100)}%)
-              </Heading>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <HStack spacing={4}>
+                  <Heading size="md">
+                    Your Score: {score}/{totalQuestions} ({Math.round((score/totalQuestions) * 100)}%)
+                  </Heading>
+                  <Text fontSize="lg">Total Time: {finalTime}</Text>
+                </HStack>
+                <Button colorScheme="blue" onClick={() => startExam(null)}>
+                  Start New Exam
+                </Button>
+              </Box>
               <Table variant="simple">
                 <Thead>
                   <Tr>
@@ -345,9 +363,6 @@ function App() {
                   })}
                 </Tbody>
               </Table>
-              <Button colorScheme="blue" onClick={() => startExam(null)}>
-                Start New Exam
-              </Button>
             </VStack>
           )}
         </VStack>

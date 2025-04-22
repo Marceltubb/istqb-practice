@@ -2,6 +2,16 @@
 
 Deze applicatie helpt je bij het oefenen voor het ISTQB Foundation Level examen. Je kunt verschillende examens maken, je tijd bijhouden, en direct feedback krijgen op je antwoorden.
 
+## Copyright Notice
+
+Copyright Notice © International Software Testing Qualifications Board (ISTQB®).
+ISTQB® is a registered trademark of the International Software Testing Qualifications Board.
+All rights reserved.
+
+Deze applicatie bevat extracts van het officiële ISTQB® Certified Tester Foundation Level (CTFL) v4.0 syllabus en oefenexamens, gebruikt voor niet-commerciële doeleinden. De bron wordt hierbij erkend als de International Software Testing Qualifications Board (ISTQB®).
+
+Deze applicatie is niet geaffilieerd met of goedgekeurd door ISTQB®. Voor officiële informatie over het ISTQB® examen, bezoek [https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/](https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/).
+
 ## Installatie Handleiding
 
 #### Stap 1: Node.js installeren
@@ -62,6 +72,82 @@ Eerst moet je Node.js installeren. Dit is nodig om de applicatie te kunnen draai
    ```
 
 De applicatie zou nu moeten draaien! 🎉
+
+## Docker/Podman Installatie
+
+Je kunt de applicatie ook draaien met Docker of Podman. Dit is handig als je deze tools al hebt geïnstalleerd.
+
+### Stap 1: Docker/Podman installeren
+
+#### Voor Windows:
+1. Download Docker Desktop van [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+2. Installeer Docker Desktop met de standaard instellingen
+3. Start Docker Desktop
+
+#### Voor Mac:
+1. Download Docker Desktop van [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+2. Installeer Docker Desktop met de standaard instellingen
+3. Start Docker Desktop
+
+### Stap 2: De applicatie bouwen en starten
+
+1. Open een terminal (Mac) of Command Prompt (Windows)
+2. Ga naar de map waar je de applicatie hebt uitgepakt:
+   ```
+   cd pad/naar/istqb-practice
+   ```
+   (Vervang "pad/naar" met het werkelijke pad waar je de map hebt neergezet)
+
+3. Bouw de Docker image (vergeet de punt aan het einde niet!):
+   ```bash
+   docker build -t istqb-practice .
+   ```
+   of met Podman:
+   ```bash
+   podman build -t istqb-practice .
+   ```
+
+4. Start de container:
+   ```bash
+   docker run -p 8080:80 istqb-practice
+   ```
+   of met Podman:
+   ```bash
+   podman run -p 8080:80 istqb-practice
+   ```
+
+5. Open je browser en ga naar:
+   ```
+   http://localhost:8080
+   ```
+
+De applicatie zou nu moeten werken! 🎉
+
+### Problemen oplossen
+
+#### Docker/Podman start niet?
+- Controleer of Docker Desktop draait
+- Controleer of poort 8080 niet al in gebruik is
+
+#### Kan de applicatie niet vinden?
+- Controleer of de container draait:
+  ```bash
+  docker ps
+  ```
+  of
+  ```bash
+  podman ps
+  ```
+
+#### De applicatie laadt niet correct?
+- Controleer de container logs:
+  ```bash
+  docker logs <container-id>
+  ```
+  of
+  ```bash
+  podman logs <container-id>
+  ```
 
 ## Veelgestelde Vragen
 

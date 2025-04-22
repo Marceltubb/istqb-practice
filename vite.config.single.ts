@@ -1,18 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { viteSingleFile } from 'vite-plugin-singlefile';
+import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react(), viteSingleFile()],
+  plugins: [react()],
   build: {
-    target: 'esnext',
-    assetsInlineLimit: 100000000,
-    chunkSizeWarningLimit: 100000000,
-    cssCodeSplit: false,
+    outDir: 'dist-single',
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
       output: {
-        inlineDynamicImports: true,
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
   },
+  publicDir: 'public',
+  base: './',
 }); 

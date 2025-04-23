@@ -12,6 +12,23 @@ Deze applicatie bevat extracts van het officiële ISTQB® Certified Tester Found
 
 Deze applicatie is niet geaffilieerd met of goedgekeurd door ISTQB®. Voor officiële informatie over het ISTQB® examen, bezoek [https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/](https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/).
 
+## Project Clonen
+
+Om het project te clonen van GitHub, volg deze stappen:
+
+1. Open een terminal (Mac) of Command Prompt (Windows)
+2. Navigeer naar de map waar je het project wilt plaatsen
+3. Voer het volgende commando uit:
+   ```bash
+   git clone https://github.com/Marceltubb/istqb-practice.git
+   ```
+4. Ga naar de projectmap:
+   ```bash
+   cd istqb-practice
+   ```
+
+Nu kun je doorgaan met de installatie handleiding hieronder.
+
 ## Installatie Handleiding
 
 #### Stap 1: Node.js installeren

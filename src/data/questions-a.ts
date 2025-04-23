@@ -562,7 +562,7 @@ export const examQuestionsA: Question[] = [
   },
   {
     "id": 23,
-    "text": "You test a system whose lifecycle is modeled by the state transition diagram shown below. The system starts in the INIT state and ends its operation in the OFF state.",
+    "text": "You test a system whose lifecycle is modeled by the state transition diagram shown below. The system starts in the INIT state and ends its operation in the OFF state. What is the MINIMAL number of test cases to achieve valid transitions coverage?",
     "options": [
       {
         "key": "A",
